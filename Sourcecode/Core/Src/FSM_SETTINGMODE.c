@@ -23,17 +23,21 @@ void fsm_tunning_mode()
      switch(status_light)
      {
          case SETTING_LED_RED:
+              if(is_button_pressed_1s(2))
+              {
+            	  time_setting_red=time_setting_red+1000;  // 10s => 11s
+            	  sendVALUE_SETTING();
+              }
               if(is_button_pressed(2))
               {
-            	  time_led_red_1=time_led_red_1+1000;  // 10s => 11s
+            	  time_setting_red=time_setting_red-1000;
             	  sendVALUE_SETTING();
               }
               if(is_button_pressed(3))
               {
-            	  time_led_red_1=time_led_red_1-1000;
-            	  sendVALUE_SETTING();
+                  time_led_red_1=time_setting_red;
+                  time_led_red_2=time_setting_red;
               }
-              time_led_red_2=time_led_red_1;
               if(timer8_flag==1)
               {
             	  ToggleLEDRed(0);
@@ -52,17 +56,21 @@ void fsm_tunning_mode()
               }
          break;
          case SETTING_LED_GREEN:
+             if(is_button_pressed_1s(2))
+             {
+           	  time_setting_green=time_setting_green+1000;
+           	  sendVALUE_SETTING();
+             }
              if(is_button_pressed(2))
              {
-           	  time_led_green_1=time_led_green_1+1000;
+           	  time_setting_green=time_setting_green-1000;
            	  sendVALUE_SETTING();
              }
              if(is_button_pressed(3))
              {
-           	  time_led_green_1=time_led_green_1-1000;
-           	  sendVALUE_SETTING();
+                 time_led_green_1=time_setting_green;
+                 time_led_green_2=time_setting_green;
              }
-             time_led_green_2=time_led_green_1;
              if(timer8_flag==1)
              {
            	  ToggleLEDGreen(0);
@@ -82,17 +90,21 @@ void fsm_tunning_mode()
          break;
          case SETTING_LED_YELLOW:
 
+             if(is_button_pressed_1s(2))
+             {
+           	  time_setting_yellow=time_setting_yellow+1000;
+           	  sendVALUE_SETTING();
+             }
              if(is_button_pressed(2))
              {
-           	  time_led_yellow_1=time_led_yellow_1+1000;
+           	  time_setting_yellow=time_setting_yellow-1000;
            	  sendVALUE_SETTING();
              }
              if(is_button_pressed(3))
              {
-           	  time_led_yellow_1=time_led_yellow_1-1000;
-           	  sendVALUE_SETTING();
+                 time_led_yellow_1=time_setting_yellow;
+                 time_led_yellow_2=time_setting_yellow;
              }
-             time_led_yellow_2=time_led_yellow_1;
              if(timer8_flag==1)
              {
            	  ToggleLEDYellow(0);

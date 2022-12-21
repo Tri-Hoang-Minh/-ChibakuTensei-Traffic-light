@@ -46,7 +46,7 @@ void fsm_pedes_mode()
 		  * Traffic Light 2: LED RED ON.
 		  * */
 		   // TODO: implementation function to turn off pedestrian light.
-		   if(timer1_flag==1)  // count to exit pedes mode.
+		   if(timer3_flag==1)  // count to exit pedes mode.
 		   {
 			   status_pedes=PEDES_OUTOFSTATE;
 		   }
@@ -76,7 +76,7 @@ void fsm_pedes_mode()
 			    setTimer5(BUZZER_DUTY_CYCLE);  // counter to turn on buzzer.
 			  }
 		   // TODO: implementation function to turn off pedestrian light and out pedes mode.
-		   if(timer1_flag==1)
+		   if(timer3_flag==1)
 		   {
 			   status_pedes=PEDES_OUTOFSTATE;
 		   }
@@ -85,8 +85,7 @@ void fsm_pedes_mode()
 	   break;
 
 	   default:
-		   //status_pedes=-1; // PEDES_OUTOFSTATE
-		   ToggleLEDPedestrian(2);  // default state.
+		   ToggleLEDPedestrian(2);             // default state.
 		   time_buzzer=0;
 		   time_frequency=0;
 		   __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, 0);

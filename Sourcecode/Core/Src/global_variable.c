@@ -15,6 +15,10 @@ int status_pedes = PEDES_OUTOFSTATE; //-1
 int time_buzzer=0;
 int time_frequency=0;
 
+int time_setting_red=0;
+int time_setting_green=0;
+int time_setting_yellow=0;
+
 int time_led_red_1=TIME_RED;
 int time_led_yellow_1=TIME_YELLOW;
 int time_led_green_1=TIME_GREEN;
@@ -25,7 +29,7 @@ int time_led_yellow_2=TIME_YELLOW;
 int time_led_green_2=TIME_GREEN;
 
 // UART buffer
-char buffer_RX[MAX_SIZE_FOR_UART]={0,0,0,0,0,0,0,0,0,0};
-char buffer_TX[MAX_SIZE_FOR_UART]={0,0,0,0,0,0,0,0,0,0};
+char buffer_RX[MAX_SIZE_FOR_UART]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+char buffer_TX[MAX_SIZE_FOR_UART]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 

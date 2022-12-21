@@ -25,17 +25,17 @@ void fsm_manual_mode()
         	 if(timer9_flag==1)
         	 {
         		 status_light=AUTO_YELLOW_1; //(YELLOW in traffic light 1 on, RED in traffic light 2 on)
-        		 setTimer9(time_led_yellow_1);
-        		 setTimer4(time_led_yellow_1);
-           		 setTimer3(time_led_yellow_1);
+        		 setTimer1(time_led_yellow_1);
+           		 setTimer2(time_led_yellow_1);
+           		 setTimer4(10);
         	 }
         	 // TODO: Implementation function , if button 3 is pressed, system will change state (MAN_GREEN_1 => AUTO_YELLOW_1_)
         	 if(is_button_pressed(3))  // button 3 is Pressed.
         	 {
         		 status_light=AUTO_YELLOW_1; //(YELLOW in traffic light 1 on, RED in traffic light 2 on)
-        		 setTimer9(time_led_yellow_1);
-        		 setTimer4(time_led_yellow_1);
-           		 setTimer3(time_led_yellow_1);
+        		 setTimer1(time_led_yellow_1);
+           		 setTimer2(time_led_yellow_1);
+           		 setTimer4(10);
         	 }
         	 //TODO: Implementation function, if button 3 is holded 1s, system will changea all state MANUAL => AUTO_INIT.
         	 if(is_button_pressed_1s(2))  // button 2 is holded 1s.
@@ -53,7 +53,6 @@ void fsm_manual_mode()
         	// Traffic light 1 is YELLOW and traffic light 2 is RED.
        	     ToggleLEDYellow(0);
         	 ToggleLEDRed(1);
-       // 	 sendDATA();
 
         	// TODO: Implementation fsm_button for CHANGE MODE In MAN_GREEN_1.
         	 if(is_button_pressed(1))  // button 1 is Pressed.
@@ -65,17 +64,17 @@ void fsm_manual_mode()
         	 if(timer9_flag==1)
         	 {
         		 status_light=AUTO_GREEN_2; //(RED in traffic light 1 on, GREEN in traffic light 2 on)
-        		 setTimer9(time_led_red_1);
-        		 setTimer4(time_led_green_2);
-        		 setTimer3(time_led_red_1);
+        		 setTimer2(time_led_green_2);
+        		 setTimer1(time_led_red_1);
+           		 setTimer4(10);
         	 }
         	 // TODO: Implementation function , if button 3 is pressed, system will change state (MAN_YELLOW_1 => AUTO_GREEN_2)
         	 if(is_button_pressed(3))  // button 1 is Pressed.
         	 {
         		 status_light=AUTO_GREEN_2; //(RED in traffic light 1 on, GREEN in traffic light 2 on)
-        		 setTimer9(time_led_red_1);
-        		 setTimer4(time_led_green_2);
-        		 setTimer3(time_led_red_1);
+        		 setTimer2(time_led_green_2);
+        		 setTimer1(time_led_red_1);
+           		 setTimer4(10);
         	 }
         	 //TODO: Implementation function, if button 3 is holded 1s, system will changea all state MANUAL => AUTO_INIT.
         	 if(is_button_pressed_1s(2))  // button 3 is holded 1s.
@@ -104,17 +103,17 @@ void fsm_manual_mode()
         	 if(timer9_flag==1)
         	 {
         		 status_light=AUTO_YELLOW_2; //(RED in traffic light 1 on, YELLOW in traffic light 2 on)
-        		 setTimer9(time_led_yellow_2);
-        		 setTimer3(time_led_yellow_2);
-        		 setTimer4(time_led_yellow_2);
+        		 setTimer1(time_led_yellow_2);
+        		 setTimer2(time_led_yellow_2);
+           		 setTimer4(10);
         	 }
         	 // TODO: Implementation function , if button 3 is pressed, system will change state (MAN_GREEN_2 => AUTO_YELLOW_2)
         	 if(is_button_pressed(3))  // button 1 is Pressed.
         	 {
         		 status_light=AUTO_YELLOW_2; //(RED in traffic light 1 on, YELLOW in traffic light 2 on)
-        		 setTimer9(time_led_yellow_2);
-        		 setTimer3(time_led_yellow_2);
-        		 setTimer4(time_led_yellow_2);
+        		 setTimer1(time_led_yellow_2);
+        		 setTimer2(time_led_yellow_2);
+           		 setTimer4(10);
         	 }
         	 //TODO: Implementation function, if button 3 is holded 1s, system will changea all state MANUAL => AUTO_INIT.
         	 if(is_button_pressed_1s(2))  // button 1 is holded 1s.
@@ -143,17 +142,17 @@ void fsm_manual_mode()
         	 if(timer9_flag==1)
         	 {
         		 status_light=AUTO_GREEN_1; //(GREEN in traffic light 1 on, RED in traffic light 2 on)
-        		 setTimer9(time_led_green_1);
-        		 setTimer4(time_led_red_2);
-        		 setTimer3(time_led_green_1);
+        		 setTimer2(time_led_red_2);
+        		 setTimer1(time_led_green_1);
+           		 setTimer4(10);
         	 }
         	 // TODO: Implementation function , if button 3 is pressed, system will change state (MAN_YELLOW_2 => AUTO_GREEN_1)
         	 if(is_button_pressed(3))  // button 1 is Pressed.
         	 {
         		 status_light=AUTO_GREEN_1; //(GREEN in traffic light 1 on, RED in traffic light 2 on)
-        		 setTimer9(time_led_green_1);
-        		 setTimer4(time_led_red_2);
-        		 setTimer3(time_led_green_1);
+        		 setTimer2(time_led_red_2);
+        		 setTimer1(time_led_green_1);
+           		 setTimer4(10);
         	 }
         	 //TODO: Implementation function, if button 3 is holded 1s, system will changea all state MANUAL => AUTO_INIT.
         	 if(is_button_pressed_1s(2))  // button 1 is holded 1s.

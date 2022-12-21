@@ -105,17 +105,17 @@ int main(void)
   /* USER CODE END 2 */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  SCH_Add_Task(TimerRun,0,10);
-  SCH_Add_Task(getKeyInput, 0, 10);
-  SCH_Add_Task(fsm_automode, 0, 10);
-  SCH_Add_Task(fsm_manual_mode, 0, 10);
-  SCH_Add_Task(fsm_tunning_mode, 0, 10);
-  SCH_Add_Task(fsm_pedes_mode, 0, 10);
+//  SCH_Add_Task(TimerRun,0,10);
+//  SCH_Add_Task(getKeyInput, 0, 10);
+//  SCH_Add_Task(fsm_automode, 0, 10);
+//  SCH_Add_Task(fsm_manual_mode, 0, 10);
+//  SCH_Add_Task(fsm_tunning_mode, 0, 10);
+//  SCH_Add_Task(fsm_pedes_mode, 0, 10);
   while (1)
   {
     /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
-	  SCH_Dispatch_Tasks();
+	//  SCH_Dispatch_Tasks();
 
   }
   /* USER CODE END 3 */
@@ -345,13 +345,13 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-	SCH_Update();
-//	getKeyInput();
-//	TimerRun();
-//	fsm_automode();
-//	fsm_manual_mode();
-//	fsm_tunning_mode();
-//	fsm_pedes_mode();
+	// SCH_Update();
+	TimerRun();
+	getKeyInput();
+	fsm_automode();
+	fsm_manual_mode();
+	fsm_tunning_mode();
+	fsm_pedes_mode();
 }
 /* USER CODE END 4 */
 
