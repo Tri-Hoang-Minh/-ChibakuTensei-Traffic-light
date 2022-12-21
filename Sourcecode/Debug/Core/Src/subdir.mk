@@ -5,6 +5,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Core/Src/Buzzer.c \
 ../Core/Src/FSM_AUTOMODE.c \
 ../Core/Src/FSM_MANUALMODE.c \
 ../Core/Src/FSM_PEDESTRIANMODE.c \
@@ -23,6 +24,7 @@ C_SRCS += \
 ../Core/Src/system_stm32f1xx.c 
 
 OBJS += \
+./Core/Src/Buzzer.o \
 ./Core/Src/FSM_AUTOMODE.o \
 ./Core/Src/FSM_MANUALMODE.o \
 ./Core/Src/FSM_PEDESTRIANMODE.o \
@@ -41,6 +43,7 @@ OBJS += \
 ./Core/Src/system_stm32f1xx.o 
 
 C_DEPS += \
+./Core/Src/Buzzer.d \
 ./Core/Src/FSM_AUTOMODE.d \
 ./Core/Src/FSM_MANUALMODE.d \
 ./Core/Src/FSM_PEDESTRIANMODE.d \

@@ -29,7 +29,8 @@ Core/Src/global_variable.o: ../Core/Src/global_variable.c \
  ../Core/Inc/displayallLED.h ../Core/Inc/UART_Communication.h \
  ../Core/Inc/global_variable.h ../Core/Inc/FSM_AUTOMODE.h \
  ../Core/Inc/FSM_MANUALMODE.h ../Core/Inc/FSM_PEDESTRIANMODE.h \
- ../Core/Inc/FSM_SETTINGMODE.h ../Core/Inc/scheduler.h
+ ../Core/Inc/FSM_SETTINGMODE.h ../Core/Inc/scheduler.h \
+ ../Core/Inc/Buzzer.h
 
 ../Core/Inc/global_variable.h:
 
@@ -104,3 +105,5 @@ Core/Src/global_variable.o: ../Core/Src/global_variable.c \
 ../Core/Inc/FSM_SETTINGMODE.h:
 
 ../Core/Inc/scheduler.h:
+
+../Core/Inc/Buzzer.h:

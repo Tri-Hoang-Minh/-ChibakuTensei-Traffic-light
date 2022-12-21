@@ -29,7 +29,7 @@ Core/Src/FSM_MANUALMODE.o: ../Core/Src/FSM_MANUALMODE.c \
  ../Core/Inc/displayallLED.h ../Core/Inc/UART_Communication.h \
  ../Core/Inc/FSM_AUTOMODE.h ../Core/Inc/FSM_MANUALMODE.h \
  ../Core/Inc/FSM_PEDESTRIANMODE.h ../Core/Inc/FSM_SETTINGMODE.h \
- ../Core/Inc/scheduler.h
+ ../Core/Inc/scheduler.h ../Core/Inc/Buzzer.h
 
 ../Core/Inc/FSM_MANUALMODE.h:
 
@@ -104,3 +104,5 @@ Core/Src/FSM_MANUALMODE.o: ../Core/Src/FSM_MANUALMODE.c \
 ../Core/Inc/FSM_SETTINGMODE.h:
 
 ../Core/Inc/scheduler.h:
+
+../Core/Inc/Buzzer.h:

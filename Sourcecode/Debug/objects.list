@@ -1,3 +1,4 @@
+"./Core/Src/Buzzer.o"
 "./Core/Src/FSM_AUTOMODE.o"
 "./Core/Src/FSM_MANUALMODE.o"
 "./Core/Src/FSM_PEDESTRIANMODE.o"
