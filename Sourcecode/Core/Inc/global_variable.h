@@ -18,7 +18,11 @@
 #include "FSM_SETTINGMODE.h"
 #include "scheduler.h"
 #include "main.h"
+#include "Buzzer.h"
 
+extern int time_setting_red;
+extern int time_setting_green;
+extern int time_setting_yellow;
 
 extern int status_light;
 extern int status_pedes;
@@ -54,9 +58,10 @@ extern int counter;
 // UART SETTING
 #define MAX_SIZE_FOR_UART	     30
 // TIME VALUE OF TRAFFIC LIGHT:
-#define TIME_RED			10000
-#define TIME_YELLOW			3000
-#define TIME_GREEN			7000
+#define TIME_RED			10000  //10s
+#define TIME_YELLOW			3000    // 3s
+#define TIME_GREEN			7000    // 7s
+
 
 #define TIME_MANUAL_MODE			10000
 #define TIME_TUNING_MODE			10000
